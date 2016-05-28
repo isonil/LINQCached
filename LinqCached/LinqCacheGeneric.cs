@@ -32,6 +32,7 @@ public static class LinqCache<T, TKey, TCached> where TCached : new()
 			if( leftToCache <= 0 )
 			{
 				list.Clear();
+
 				foreach( var elem in source )
 				{
 					list.Add(selector(elem));
@@ -116,6 +117,9 @@ public static class LinqCache<T, TKey, TCached> where TCached : new()
 
 	public static void FramePassedFor(Predicate<TKey> keyPredicate)
 	{
+		if( keyPredicate == null )
+			throw new ArgumentNullException("keyPredicate");
+
 		foreach( var elem in cached )
 		{
 			if( keyPredicate(elem.Key) )
@@ -155,6 +159,9 @@ public static class LinqCache<T, TKey, TCached> where TCached : new()
 
 	public static void SetDirtyWhere(Predicate<TKey> keyPredicate)
 	{
+		if( keyPredicate == null )
+			throw new ArgumentNullException("keyPredicate");
+
 		foreach( var elem in cached )
 		{
 			var value = elem.Value;

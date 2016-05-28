@@ -25,6 +25,9 @@ public static class LinqCachedExtensions
 		if( key == null )
 			throw new ArgumentNullException("key");
 
+		if( selector == null )
+			throw new ArgumentNullException("selector");
+
 		return LinqCache<T, TKey, TCached>.GetCachedEntryList(source, key, cacheDuration, selector);
 	}
 
@@ -35,6 +38,9 @@ public static class LinqCachedExtensions
 
 		if( key == null )
 			throw new ArgumentNullException("key");
+
+		if( updater == null )
+			throw new ArgumentNullException("updater");
 
 		return LinqCache<T, TKey, TCached>.GetCachedEntryList(source, key, cacheDuration, updater);
 	}
