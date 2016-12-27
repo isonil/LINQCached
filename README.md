@@ -1,9 +1,9 @@
 # About
-IEnumerable extension which allows easy frame-based caching.
+IEnumerable extension to do frame-based caching easily.
 
 LinqCache.FramePassed() must be called each frame.
 
-LINQCached caches IEnumerable elements and stores them in a list which it then keeps returning for the next X frames instead of enumerating over IEnumerable elements over again. Useful in cases like this:
+LINQCached caches IEnumerable elements and stores them in a list which it then keeps returning for the next X frames instead of enumerating over the IEnumerable elements over again. It can be useful in such situations:
 
 ```C#
 foreach( var elem in collection
