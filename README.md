@@ -1,5 +1,5 @@
 # About
-IEnumerable extensions which provide frame-based object caching.
+IEnumerable extension methods which provide easy frame-based object caching.
 
 LinqCache.FramePassed() must be called every frame.
 
