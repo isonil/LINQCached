@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/8492408/124279939-5b404900-db48-11eb-9464-2f03df683f30.png">
+</p>
+
 # About
 IEnumerable extension methods which provide easy frame-based object caching.
 
